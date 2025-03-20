@@ -1,0 +1,116 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2d4f2d, #4d7b3a); /* Fundo com tons de verde e marrom */
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden; /* Evita rolagem da página */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #d0f0c0; /* Cor de texto clara para contraste com fundo escuro */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a0e6a1;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* Garantir que o conteúdo da tela não seja sobreposto */
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Canvas com fundo de floresta */
+canvas {
+    border: 1px solid #4d7b3a;
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png'), linear-gradient(135deg, #6b8e23, #4b5d16); /* Fundo com textura de madeira */
+    background-size: cover;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Painel de informações fixo no lado direito superior */
+.info-panel {
+    position: fixed; /* Torna o painel fixo */
+    top: 20px; /* Distância do topo */
+    right: 20px; /* Distância da direita */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Garante que o painel fique acima do canvas */
+}
+
+/* Informações do jogador */
+.info {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo dos botões */
+.controls button {
+    padding: 12px 25px;
+    background-color: #4b5d16; /* Verde escuro do tema floresta */
+    border: 2px solid #6b8e23; /* Cor mais clara para o contorno */
+    color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Efeitos de hover no botão */
+.controls button:hover {
+    background-color: #6b8e23;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* Efeito ao pressionar o botão */
+.controls button:active {
+    transform: scale(0.95);
+    background-color: #3e4d12;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        font-size: 1.6rem;
+    }
+
+    .info-panel {
+        padding: 10px;
+        gap: 5px;
+    }
+}

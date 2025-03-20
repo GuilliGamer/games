@@ -1,0 +1,75 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('https://images7.alphacoders.com/845/845131.png'); /* URL do seu wallpaper */
+    background-size: cover; /* Faz a imagem cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 20px 0;
+    text-shadow: 2px 2px 5px #ff1414;
+}
+
+#gameWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#gameCanvas {
+    border: 0px solid #ff1414;
+    border-radius: 15px;
+    background-color: #fffafc59;
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    box-shadow: 0 0 1px #ff1414;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ff1414;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px #ff1414;
+}
+
+button:hover {
+    background-color: #ff1414;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+#scoreBoard {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+
+#scoreBoard span {
+    background-color: #fff0f5;
+    padding: 5px 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #ff69b4;
+}
